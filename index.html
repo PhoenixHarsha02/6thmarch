@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment and decrement</title>
+</head>
+<body>
+    <script>
+       
+        function incrementValue() {
+            let c=parseInt(document.getElementById('inc').value);
+            if((c<10) && (c>0)){
+                document.getElementById('inc').value = c+1;
+        }
+            else{
+            document.getElementById('b1').disabled=true;
+            }
+    }
+        function decrementValue() {
+            let c=parseInt(document.getElementById('inc').value);
+            if(c>0){
+            document.getElementById('inc').value = c-1;
+            }
+            else{
+                document.getElementById('b2').disabled=true;
+            }
+    }
+    </script>
+    <button onclick="incrementValue();" id="b1">Increment</button>
+    <input type="text" id="inc" value="0" >
+    <button onclick="decrementValue();" id="b2">Decrement</button> 
+
+</body>
+</html>
